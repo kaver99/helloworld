@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dataMapper">
+     
+    <select id="selectData" parameterType="Map" resultType="db.com.test.DataDTO">
+        SELECT
+            username
+            , name
+            , phone
+            , telecom
+            , create_date
+            , access_date
+            , img_thumbnail
+            , socialtype
+        FROM violet_user
+        WHERE 1=1 
+        AND username = #{username}
+        AND socialtype = #{socialtype}
+        
+    </select>
+    
+</mapper>
