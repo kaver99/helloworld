@@ -1,4 +1,4 @@
-package com.test;
+package com.patten.iterator;
 
 public class Book {
 	private String name;

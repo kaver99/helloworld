@@ -1,4 +1,4 @@
-package com.test;
+package com.patten.iterator;
 
 public class BookShelf implements Aggregate {
 	private Book[] books;

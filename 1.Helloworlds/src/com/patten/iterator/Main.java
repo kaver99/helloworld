@@ -1,4 +1,4 @@
-package com.test;
+package com.patten.iterator;
 
 public class Main {
 	public static void main(String[] args) {

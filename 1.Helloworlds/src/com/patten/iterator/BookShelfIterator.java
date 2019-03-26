@@ -1,4 +1,4 @@
-package com.test;
+package com.patten.iterator;
 
 public class BookShelfIterator implements Iterator {
 	private BookShelf bookShelf;
@@ -10,7 +10,7 @@ public class BookShelfIterator implements Iterator {
 	}
 	
 	public boolean hasNext() {
-		if(index < bookShelf.getLength()) {
+		if(index <bookShelf.getLength()) {
 			return true;
 		}else{
 			return false;
