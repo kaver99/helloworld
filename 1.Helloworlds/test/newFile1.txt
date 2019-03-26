@@ -1,0 +1,5 @@
+#written by FileProperties
+#Tue Mar 26 14:13:08 KST 2019
+day=21
+year=2004
+month=4
