@@ -270,6 +270,8 @@ public class Jeonmun {
 	 * @return	-1(그룹이 없음)
 	 */
 	public int records(String strGroupName) {
+		// this.htGroup.get = new JeonmunGroup(strGroupName, cGroupType, iRecordCount, iGroupFields, iBegin);
+		// 생성자로 지정한 인스턴스를 JeonmunGroup 객체로 선언  
 		JeonmunGroup gr = this.htGroup.get(strGroupName);
 		int iRecords = -1;
 		
@@ -308,7 +310,10 @@ public class Jeonmun {
 	public Object get(String strGroupName, int iRecordIndex, int iFieldIndex) {
 		String strValue = null;
 		JeonmunGroup gr = this.htGroup.get(strGroupName);
-		
+		System.out.println("iRecordIndex - 1 : " + (iRecordIndex - 1));
+		System.out.println("gr.iFields : " + gr.iFields);
+		System.out.println("gr.getIndex(iFieldIndex-1 : " + gr.getIndex(iFieldIndex-1));
+		System.out.println(((iRecordIndex - 1) * gr.iFields) + gr.getIndex(iFieldIndex-1));
 		strValue = this.astrAllField[((iRecordIndex - 1) * gr.iFields) + gr.getIndex(iFieldIndex-1)];
 		
 		return strValue;		
@@ -316,8 +321,14 @@ public class Jeonmun {
 	
 	public static void main(String[] args) {
 		Jeonmun jeonmun = new Jeonmun();
-		jeonmun.parsing("@s@,f,3,id,name,email", ',');
-		System.out.println(jeonmun.get("@s@",1));
+//		jeonmun.parsing("@s@,f,3,id,name,email", ',');
+		
+		StringBuffer sb = new StringBuffer();
+		sb.append("@g1@|r|5|data1|data2|data3|data4|data5\r\n");
+		sb.append("data6|data7|data8|data9|data10");
+		jeonmun.parsing(sb.toString(), '|');
+		System.out.println(jeonmun.get("@g1@",1,1));
+		System.out.println(jeonmun.records("@g1@"));
 		
 	}
 }

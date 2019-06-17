@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.launching.macosx.MacOSXType/Java SE 7 [1.7.0_80]"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="/Users/minsungkim/eclipse-workspace/1.HelloWorld/lib/apache_common/apache-jakarta-oro.jar"/>
 	<classpathentry kind="lib" path="/Users/minsungkim/eclipse-workspace/1.HelloWorld/lib/apache_common/commons-beanutils-1.7.0.jar"/>
@@ -32,5 +32,6 @@
 	<classpathentry kind="lib" path="/Users/minsungkim/eclipse-workspace/1.HelloWorld/lib/logback/slf4j-api-1.7.25.jar"/>
 	<classpathentry kind="lib" path="lib/apache_mybatis/mybatis-3.5.0.jar"/>
 	<classpathentry kind="lib" path="lib/jdbc/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="lib/json/json_simple-1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

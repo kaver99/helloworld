@@ -21,14 +21,19 @@ public class JdbcDataRowTest {
             conn = DriverManager.getConnection(url,dbId,dbPw);
             String sql = "SELECT username, name, socialtype FROM violet_user";   
             pstmt = conn.prepareStatement(sql);  
-            rs = pstmt.executeQuery(); 
+            rs = pstmt.executeQuery();
+            String jeonmun = "";
+            
             while(rs.next()){
                  System.out.print(rs.getString("username"));
                  System.out.print(" ");
                  System.out.print(rs.getString("name"));
                  System.out.print(" ");
                  System.out.println(rs.getString("socialtype"));
+                 
+                 jeonmun = "@s@|f|3|" + rs.getString("username") + "|" + rs.getString("name") + "|" + rs.getString("socialtype"); 
             }
+            System.out.println(jeonmun);
         }catch(ClassNotFoundException e){
             // driver로딩 실패...
         	e.printStackTrace();
